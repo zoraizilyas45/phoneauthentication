@@ -1,4 +1,4 @@
-package com.authphone
+package com.authphone.me
 
 import android.app.Application
 import com.facebook.react.PackageList

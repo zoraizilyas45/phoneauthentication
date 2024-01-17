@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "604966205951",
+    "project_id": "authphone-9428b",
+    "storage_bucket": "authphone-9428b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:604966205951:android:705c7242049482f8994fca",
+        "android_client_info": {
+          "package_name": "com.authphone.me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "604966205951-fiijiinrmiuqfiaqujcbrospgrfkmhn2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.authphone.me",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "604966205951-hkfm11e5oao6923b5sti1sn97rgvvlvr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp9uQ_4PdOG73iQDNufme2pc8LCfzI5lY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "604966205951-hkfm11e5oao6923b5sti1sn97rgvvlvr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
