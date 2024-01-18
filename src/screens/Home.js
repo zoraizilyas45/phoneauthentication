@@ -3,7 +3,7 @@ import React from 'react'
 
 const Home = ({navigation}) => {
   const moveback=()=>{
-    navigation.navigate("PhoneAuthScreen")
+    navigation.goBack()
   }
  
   return (

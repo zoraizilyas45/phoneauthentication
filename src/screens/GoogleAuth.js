@@ -1,5 +1,5 @@
 import React from 'react';
-import {TouchableOpacity, Text, View, StyleSheet } from 'react-native'; // Add StyleSheet import
+import { TouchableOpacity, Text, View, StyleSheet } from 'react-native'; // Add StyleSheet import
 import auth from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 
@@ -8,32 +8,40 @@ GoogleSignin.configure({
 });
 
 async function onGoogleButtonPress() {
-  // Check if your device supports Google Play
-  await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
-  // Get the users ID token
-  const { idToken } = await GoogleSignin.signIn();
+  try {
+    // Check if your device supports Google Play
+    await GoogleSignin.hasPlayServices({ showPlayServicesUpdateDialog: true });
+    // Get the users ID token
+    const { idToken } = await GoogleSignin.signIn();
 
-  // Create a Google credential with the token
-  const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+    // Create a Google credential with the token
+    const googleCredential = auth.GoogleAuthProvider.credential(idToken);
 
-  // Sign-in the user with the credential
-  return auth().signInWithCredential(googleCredential);
+    // Sign-in the user with the credential
+    await auth().signInWithCredential(googleCredential);
+  } catch (error) {
+    console.error('Google Sign-In Error:', error);
+  }
 }
 
-function GoogleSignIn({navigation}) {
+function GoogleSignIn({ navigation }) {
   return (
+
     <View>
-      <TouchableOpacity style={styles.btn} onPress={() => onGoogleButtonPress().then(() =>navigation.navigate('Home') )}>
+       <View style={{alignItems:'center'}}>
+      <TouchableOpacity style={styles.btn} onPress={() => onGoogleButtonPress().then(() => navigation.navigate('Home'))}>
         <Text style={styles.text}>Google Sign-In</Text>
       </TouchableOpacity>
     </View>
+    </View>
+   
   );
 }
 
 const styles = StyleSheet.create({
   btn: {
-    marginTop: "30%",
-    backgroundColor: 'blue',
+    marginTop: "35%",
+    backgroundColor: 'purple',
     borderRadius: 10,
     paddingVertical: 10,
     alignItems: 'center',
@@ -47,6 +55,8 @@ const styles = StyleSheet.create({
     shadowRadius: 4.65,
     elevation: 8,
     bottom: 2,
+    width:'40%',
+    alignContent:'center'
   },
   text: {
     textAlign: 'center',
