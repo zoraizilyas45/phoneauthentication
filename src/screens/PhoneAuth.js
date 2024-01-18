@@ -28,6 +28,10 @@ const PhoneAuthScreen = ({ navigation }) => {
     }
   };
 
+  // const movehome=()=>{
+  //   navigation.navigate('Home')
+  // }
+
   return (
     <View style={{ top: 30 }}>
       <View style={{ top: 4 }}>

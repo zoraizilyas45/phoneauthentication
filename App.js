@@ -1,18 +1,22 @@
 import 'react-native-gesture-handler';
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import PhoneAuthScreen from './src/screens/PhoneAuth'
-import PhoneSignIn from './src/screens/PhoneAuth'
+import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+
+import {NavigationContainer} from '@react-navigation/native';
+import AppNavigator from './src/navigation/AppNavigator';
 
 const App = () => {
+  
+  
   return (
-    <View>
-      <PhoneSignIn/>
-      {/* <PhoneAuthScreen/> */}
+    <View style={{flex:1}}>
+      <NavigationContainer>
+        <AppNavigator />
+      </NavigationContainer>
     </View>
-  )
-}
+  );
+};
 
-export default App
+export default App;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

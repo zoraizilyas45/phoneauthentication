@@ -1,10 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View,Button } from 'react-native'
 import React from 'react'
 
 const Home = ({navigation}) => {
+  const moveback=()=>{
+    navigation.navigate("PhoneAuthScreen")
+  }
+ 
   return (
     <View>
       <Text>Home</Text>
+      <Button title='Back' onPress={moveback}/>
     </View>
   )
 }
